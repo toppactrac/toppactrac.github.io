@@ -1,0 +1,97 @@
+/* ----------------------------------------------------------------
+	Canvas: Finance
+-----------------------------------------------------------------*/
+
+:root {
+	--themecolor: ;
+	--themecolorrgba: ;
+	--themocolorsecondary: #FDE3A1;
+}
+
+.bgcolor-2 {
+	background-color: var(--themocolorsecondary) !important;
+}
+
+@media (min-width: 992px) {
+	.menu-link {
+		text-transform: none;
+		letter-spacing: 0;
+		font-weight: 500;
+		font-size: 0.925rem;
+	}
+}
+
+
+/* .btn-scribble */
+.btn-scribble {
+	position: relative;
+	font-size: 1.125rem;
+}
+
+.btn-scribble .btn-scribble-svg {
+	position: absolute;
+	top: 36%;
+	left: 50%;
+	pointer-events: none;
+	fill: none;
+	stroke: currentColor;
+	width: calc(100% + 30px);
+	height: calc(100% + 30px);
+	transform: translate(-50%, -50%);
+	stroke-width: 1px;
+}
+
+.btn-scribble .btn-scribble-svg path {
+	stroke-dashoffset: 0;
+	stroke-dasharray: 370;
+}
+
+
+
+/* .btn-double-border */
+.btn-double-border {
+	position: relative;
+	font-size: 1.25rem;
+	font-weight: 500;
+	font-family: 'Newsreader', serif;
+}
+
+.btn-double-border::before,
+.btn-double-border::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	background: currentColor;
+	top: 100%;
+	left: 0;
+	pointer-events: none;
+	transform-origin: 50% 0%;
+	transform: scaleX(0.9);
+	transition-property: transform;
+	transition-duration: 0.3s;
+	transition-delay: 0.1s;
+	transition-timing-function: cubic-bezier(0.2, 1, 0.8, 1);
+}
+
+.btn-double-border:hover::before,
+.btn-double-border:hover::after {
+	transform: scaleX(1.05);
+	transition-timing-function: cubic-bezier(0.2, 0, 0.3, 1);
+}
+
+.btn-double-border::after {
+	content: '';
+	top: calc(100% + 4px);
+	width: 70%;
+	left: 15%;
+}
+
+.btn-double-border:hover::before {
+	transition-delay: 0s;
+}
+
+.card-img-top[class*="rounded-"] {
+	border-bottom-left-radius: 0 !important;
+	border-bottom-right-radius: 0 !important
+}
