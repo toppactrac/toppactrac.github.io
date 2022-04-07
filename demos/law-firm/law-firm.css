@@ -1,0 +1,230 @@
+ /* ----------------------------------------------------------------
+	Canvas: Law Firm
+-----------------------------------------------------------------*/
+
+:root {
+	--themecolor: #0F317E;
+	--themecolorrgba: 15, 49, 126;
+	--p-f-family: 'Manrope', sans-serif;
+}
+
+.text-border-right {
+	overflow: hidden;
+}
+
+.text-border-right::after {
+	content:"";
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	margin-right: -100%;
+	margin-left: 10px;
+	border-top: 1px solid #444;
+}
+
+.text-border-right.b-w-50::after {
+	width: 10rem;
+}
+
+.dark .text-border-right::after {
+	border-color: #fff;
+}
+
+.large-device-menu a {
+	position: relative;
+	display: block;
+	margin-bottom: 14px;
+	transition: all .25s ease;
+	font-weight: 500;
+}
+
+.large-device-menu a:last-child {
+	margin-bottom: 0;
+}
+
+.large-device-menu a:hover {
+	transform:  translateX(2px);
+	color: var(--bs-warning) !important;
+}
+
+.service-feature  .grid-inner .more-link {
+	margin-top: 10px;
+}
+
+.dark #header,
+#header.dark,
+.dark #header-wrap {
+	background-color:  var(--themecolor);
+	border-bottom: 1px solid var(--bs-warning);
+}
+
+#logo a img {
+	height: auto !important;
+}
+
+@media (min-width: 992px) {
+
+	.sticky-header .large-device-menu-wrap {
+		align-items: center;
+	}
+
+	.sticky-header .large-device-menu a {
+		display: inline-block;
+		margin: 0 18px;
+		transform: none;
+	}
+
+	.sticky-header .header-row {
+		align-items: center !important;
+		padding-top: .5rem !important;
+		padding-bottom: .5rem !important;	
+	}
+
+	.sticky-header .large-device-menu {
+		padding: 0;
+		margin: 0
+	}
+
+	.service-feature {
+		position: relative;
+		transform: translateY(-50%);
+		z-index: 4;
+	}
+
+	.service-feature  .grid-inner .more-link {
+		opacity: 0;
+		visibility: hidden;
+		transition: all .3s ease;
+		margin-top: 0;
+	}
+
+	.service-feature .grid-inner:hover .more-link {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(4px);
+		will-change: transform;
+	}
+
+	.service-feature .grid-inner .f-b-desc {
+		transform: translateY(10px);
+		transition: transform .3s ease;
+		will-change: transform;
+	}
+
+	.service-feature .grid-inner:hover .f-b-desc {
+		transform: translateY(-4px);
+	}
+
+	.grid-border { overflow: hidden; }
+
+	.grid-border [class^=col-]:before {
+		content: '';
+		position: absolute;
+	}
+
+	.grid-border [class^=col-]:before {
+		height: 100%;
+		top: 0;
+		left: -2px;
+		border-left: 2px solid rgba(var(--themecolorrgba),0.1);
+	}
+
+	.dark .grid-border [class^=col-]:before { border-color: rgba(255,255,255,0.15); }
+
+}
+
+.lady-justice-img::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	box-shadow: -30px -30px 0 var(--bs-warning);
+	opacity: .4;
+	border-radius: .25rem;
+}
+
+#lawfirm-inline label {
+	display: inline-block;
+	text-transform: none;
+	letter-spacing: 0;
+	font-weight: 300;
+	font-size: 1.75rem;
+	line-height: 2;
+}
+
+#lawfirm-inline input,
+#lawfirm-inline select,
+.dark #lawfirm-inline input,
+.dark #lawfirm-inline select {
+	display: inline-block;
+	background-color: transparent;
+	display: inline-block;
+	margin: 0 10px;
+	border-radius: 0;
+	width: auto;
+	cursor: pointer;
+	border: none;
+	border-bottom: 1px solid #FFF !important;
+	font-size: 1.75rem;
+	padding: 0 3px;
+	color: var(--bs-warning);
+	font-weight: 300;
+}
+
+#lawfirm-inline input:focus { outline: none; }
+
+
+#lawfirm-inline select,
+.dark #lawfirm-inline select {
+	-webkit-appearance: none;
+	border-radius: 0;
+	background-position: 100% 50%;
+	background-repeat: no-repeat;
+	background-image: url("images/select-arrow.svg");
+	padding-right: 20px;
+	background-size: 12px;
+}
+
+#lawfirm-inline input::-moz-placeholder {
+	color: var(--bs-warning);
+}
+
+#lawfirm-inline input:-ms-input-placeholder {
+	color: var(--bs-warning);
+}
+
+#lawfirm-inline input::-webkit-input-placeholder {
+	color: var(--bs-warning);
+}
+
+.lawfirm-inline-loader.css3-spinner { background-color: rgba(255, 255, 255, 0.8) }
+
+#lawfirm-inline-submitted,
+.lawfirm-inline-success #lawfirm-inline,
+.lawfirm-inline-success .lawfirm-inline-heading,
+body:not(.lawfirm-inline-processing) .lawfirm-inline-loader { display: none; }
+
+.lawfirm-inline-success #lawfirm-inline-submitted { display: block; }
+
+.blog-cards .card::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background-color: var(--bs-warning);
+}
+
+.widget_links:not(.widget-li-noicon) li::before {
+	content: "\e77d";
+	font-size: 10px;
+	top: 4px;
+	color: var(--bs-warning);
+}
+
+.widget_links li {
+	padding: 6px 0;
+}

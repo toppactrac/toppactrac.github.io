@@ -1,0 +1,59 @@
+/* ----------------------------------------------------------------
+    Fonts
+
+    Replace your Fonts as necessary
+-----------------------------------------------------------------*/
+
+@font-face {
+    font-family: "cute-aurora";
+    src: url("CuteAurora.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body,
+h5,
+h6,
+small,
+.menu-link,
+.mega-menu-style-2 .mega-menu-title > .menu-link,
+.sub-menu-container .menu-item > .menu-link,
+.wp-caption,
+.fbox-center.fbox-italic p,
+.skills li .progress-percent .counter,
+.nav-tree ul ul a,
+.font-body,
+.entry-link span,
+.entry blockquote p,
+.more-link,
+.comment-content .comment-author span,
+.comment-content .comment-author span a,
+.button.button-desc span,
+.testi-content p,
+.team-title span,
+.before-heading,
+.wedding-head .first-name span,
+.wedding-head .last-name span,
+.top-search-form input,
+.entry-link,
+.entry.entry-date-section span,
+.button.button-desc,
+.tab-nav-lg li a,
+.counter,
+label,
+.widget-filter-links li a,
+.nav-tree li a,
+.wedding-head { font-family: 'Roboto', sans-serif !important; }
+
+
+h1,
+h2,
+h3,
+h4,
+#logo a,
+.font-primary  {
+    font-family: 'cute-aurora' !important;
+    word-spacing: -3px;
+}
+
